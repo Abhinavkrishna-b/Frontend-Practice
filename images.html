@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Image basics</title>
+        <style>
+            .vegeta{
+                width:300px;
+                height:300px;
+                object-fit:contain;
+                object-position:top;
+                border:3px solid violet; /* this is the The shorthand property (width style color) -- only these attributes can be used like this*/
+            }
+            .images{
+                border-radius:40px;
+                width:75px;
+                height:75px;
+                object-fit:cover;
+                border:1px solid blue;
+                margin: 5px 10px 5px 10px;/*top right bottom left*/
+                vertical-align:middle;
+            }
+            .text-box {
+                font-size: 18px;
+                border:1px solid grey;
+                width: 300px;
+                padding: 7px;
+                vertical-align: middle;
+                margin-right:10px;
+            }   
+            .button{
+                background-color:blue;
+                color:white;
+                padding:7px;
+                border-radius:15px;
+                border:none;
+                margin-right:5px;
+            }
+            div{
+                border-radius:30px;
+                border:1px solid grey;
+                display:inline-block;
+                padding:7px;
+                box-shadow:3px 1px 5px rgb(93, 92, 92);
+            }
+        </style>
+    </head>
+    <body>
+        <img class="vegeta" src="vegeta.jpg" alt="Error">
+        <p>A comment</p>
+        <div>
+        <img class="images" src="vegeta.jpg" alt="Error">
+        <input class="text-box" type="text" placeholder="What's Happening ?">
+        <button class="button">Tweet</button>
+        </div>
+    </body>
+</html>

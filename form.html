@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="#"><!--Also can give method attribute-->
+            <div>                
+                <label for="useThisInLabel"> First Name:</label>
+                <input type="textbox" name="username" id="useThisInLabel" placeholder="UserName" 
+                value="Muruga" maxlenght="10" requried autofocus><!-- Value attribute displays a default value-->
+            </div>
+            <div>
+                <label for="linking">Password:</label>
+                <input type="password" name="psd" id="linking" minlength="7">
+            </div>
+            <div>
+                <label for="linking">Email:</label>
+                <input type="email" name="mail" id="linking">
+            </div>
+            <div>
+                <label for="year">Year of birth:</label>
+                <input type="number" name="year" id="year" maxlength="4" min="1900" max="2050" step="10"><!-- here step="10" skip 10 from each number to the next-->
+            </div>
+            <div>
+                <label for="dob">DOB:</label>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <div>
+                <label for="abt">About:</label>
+                <textarea name="about" id="abt" cols="15" rows="5">This will display in the textarea by default</textarea>
+            </div>
+            <div>
+                <input type="checkbox" name="1st" id="first">
+                <label for="first">First</label>
+                
+                <input type="checkbox" name="2nd" id="second">
+                <label for="second">Second</label>
+            </div>
+            <div><!-- note here in radio the name of the options in radio box should be same otherwise u can give multiple choices like checkbox 
+                and it will not group-->
+                <input type="radio" name="gender" id="m" value="Male">
+                <label for="m">Male</label>
+                <input type="radio" name="gender" id="f" value="Female">
+                <label for="f">Female</label>
+            </div>
+            <div>
+                <select name="state" id="st">
+                    <option value="TN">TN</option>
+                    <option value="AP">AP</option>  <!--here u need to give the value coz it gives the value to the server-->
+                    <option value="KL">KL</option>
+                </select>
+            </div>
+            <div>
+                <label for="file">Resume:</label>
+                <input type="file" name="resume" id="file">
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </body>
+</html>

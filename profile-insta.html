@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The div element</title>
+        <style>
+            p{
+                font-weight:bold;
+                font-size:medium;
+                margin:5px 10px 5px 10px;
+                /*here by deafult the <p> is  block but is consider only the area of div as a entire line */
+
+            }
+            .para{
+                font-family: Arial;
+                font-weight:normal;
+                color:grey;
+                opacity:0.9px;
+            }
+            button{
+                background-color: blue;
+                color:white;
+                padding:5px;
+                border:none;
+                border-radius:5px;
+                margin: 0px 10px 10px 10px;
+            }
+            .images{
+                width: 230px;
+                height:270px;
+                object-fit: cover;
+                margin-bottom: 12px;
+            }
+            div{
+                width:230px;
+                border: 1px solid rgb(180, 174, 174);
+                border-radius:20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                display: inline-block;
+                margin:10px 10px 10px 5px;
+                overflow: hidden; /* Ensures contents respect the border radius */
+            }
+        </style>
+    </head>
+    <body>
+        <div><!-- By deafult div is a inline-block element that takes a entire line-->
+        <img class="images"src="vegeta.jpg">
+        <p>Vegeta</p>
+        <p class="para">Saiyan Prince</p>
+        <button>Add friend</button>
+        </div>
+        <div>
+            <img class="images" src="goku.jpg">
+            <p>Goku</p>
+            <p class="para">The mortal among gods</p>
+            <button>Add friend</button>
+        </div>
+        <div>
+            <img class="images" src="vegito.jpg">
+            <p>Vegito</p>
+            <p class="para">Fusion of goku and vegeta</p>
+            <button>Add friend</button>
+        </div>
+    </body>
+</html>

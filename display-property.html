@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                font-size:25px;
+                font-weight:bold;
+                font-family:Arial;
+            }
+            .display1{
+                display:block;
+                background-color: rgb(240, 240, 240);
+                font-size:medium;
+                border:none;
+                padding:5px;
+                margin:15px;
+                width:500px;
+            }
+            .display2{
+                font-family:Georgia;
+                /*background-color: red;  if this is specified here definitely red color will dispaly coz this class override the above class*/
+            }
+            .requestbox{
+                background-color:black;
+                color:white;
+                font-size:15px;
+                padding:5px;
+                margin:10px;
+                border:none;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Request to a ride</p>
+        <input class="display1 display2" type="text" placeholder="Enter Pickup Destination">
+        <input class="display1 display2" type="text" placeholder="Enter Destination">
+        <button class="requestbox">Request Now</button>  <button style="font-size:medium;padding:5px;border:none;cursor:pointer;">Schedule for Later</button>
+    </body>
+</html>

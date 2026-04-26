@@ -1,0 +1,67 @@
+<!DOCTYPE html><!-- To tell the browesr to use the latest version of html-->
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Basic</title>
+        <style>
+            p{
+                font-family:Inter;
+            }
+            .para1{
+                color:black;
+                font-weight:bolder;
+                font-size:larger;
+            }
+            .para2{
+                color:green;
+                font-weight:bolder;
+                font-size:17px;
+            }
+            .button1{
+                background-color:yellow;
+                color:black;
+                border:none;
+                border-radius:20px;
+                margin-right:10px;
+                height :40px;
+                width:100px;
+                cursor:pointer;
+                transition:background-color 0.2s,opacity 0.5s,box-shadow 0.2s;
+            }
+            .button1:hover{
+                background-color: violet;
+                box-shadow: 5px 5px 10px black;
+            }
+            .button1:active{
+                opacity:0.7;
+            }
+            .button2{
+                background-color:orange;
+                color:black;
+                border:none;
+                border-radius:20px;
+                margin-right:10px;
+                height :40px;
+                width:100px;
+                cursor:pointer;
+                transition:background-color 0.2s,opacity 0.5s,box-shadow 0.2s;
+            }
+            .button2:hover{
+                background-color:mediumaquamarine;
+                box-shadow:5px 5px 10px black;
+            }
+            .button2:active{
+                opacity:0.7;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https:/amazon.com" target="_blank"><h3>Back to Amazon HomePage</h3></a> <!--target="_blank" This redirect the amazon page 
+        in a new webpage. If target not specified by deafult display in the same page. -->
+        <p class="para1">HP Keyboard cover</p>
+        <p class="para2">$350-only limited edition</p>
+        <Button class="button1">Add to cart</Button> <button class="button2">Buy Now</button>
+    </body>
+</html>

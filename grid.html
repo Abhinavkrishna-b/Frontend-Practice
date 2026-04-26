@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid-use to perfect alignment</title>
+        <style>
+            .grid{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr; /* here fr refers to franction when the size is changed in a webpage it split to that fraction of divison*/
+                column-gap: 20px;
+                row-gap:20px;
+            }
+            .one{
+                background-color: red;
+            }
+            .two{
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <!-- The grid is use to a perfect layout or alignment than in specifying inline-block,block-->
+    <!-- The grid properties are by deafult div is a block element but u can see after grid is used it is like a inline-block.
+     if u add some extra space or something in a particular div the row also arranged accordingly (vertical alignment).-->
+    <body>
+        <div class="grid">
+            <div class="one">r1c1</div>
+            <div class="two">r1c2</div>
+            <div class="one">r1c3</div>
+            <div class="two">r2c1 - <p>Because of this the height change ! (a para tag)</p></div>
+            <div class="one">r2c2</div>
+            <div class="two">r2c3</div>
+            <div class="one">r3c1</div>
+            <div class="two">r3c2</div>
+            <div class="one">r3c3</div>
+            <!-- note: Sometime if u specified width:300px; it focres the grid 1fr to be in that specified width so assign width:100%-->
+        </div>        
+    </body>
+</html>

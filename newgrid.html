@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grids</title>
+        <style>
+            .grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 20px;
+                row-gap: 20px;
+            }
+            .images{
+                width:100%;
+                height:250px;
+                object-fit: cover;
+            }
+            .container{
+                border:1px solid black;
+                border-radius:30px;
+                margin-top: 10px;
+                overflow:hidden;
+            }
+            button{
+                background-color: blue;
+                color:white;
+                font-family: Arial;
+                border:none;
+                margin:0 0 5px 20px ;
+                padding: 5px;
+                cursor: pointer;
+            }
+            p{
+                margin:0 0 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="container">
+                <img src="vegeta.jpg" class="images" alt="Error">
+                <div>
+                    <p><strong>Vegeta</strong></p>
+                </div>
+                <div>
+                    <p>The Saiyan Prince</p>
+                </div>
+                <div>
+                    <button>Add friend</button>
+                </div>
+            </div>
+            <div class="container">
+                <img src="goku.jpg" class="images" alt="Error">
+                <div>
+                    <p><strong>Goku</strong></p>
+                </div>
+                <div>
+                    <p>Mortal Among Gods</p>
+                </div>
+                <div>
+                    <button>Add friend</button>
+                </div>
+            </div>
+            <div class="container">
+                <img src="vegito.jpg" class="images" alt="Error">
+                <div>
+                    <p><strong>Vegito</strong></p>
+                </div>
+                <div>
+                    <p>Fusion of Goku and Vegeta</p>
+                </div>
+                <div>
+                    <button>Add friend</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
