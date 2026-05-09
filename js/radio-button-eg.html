@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        body{
+            background:linear-gradient(to right,rgb(253, 175, 72),lightblue);
+            margin:5px;
+            color:white;
+        }
+        #container{
+            background-color: grey;
+            height:200px;
+            width:250px;
+            margin-left: 500px;
+            padding:5px;
+        }
+        button{
+            background-color: blue;
+            padding:3px;
+            border: 1px blue solid;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input name="qualification" type="radio" id="hs" value="High School">
+        <label for="hs">High School</label><br>
+        <input name="qualification" type="radio" id="ug" value="Under Grarduate">
+        <label for="ug">Under Grarduate</label><br>
+        <input name="qualification" type="radio" id="pg" value="Post Graduate">
+        <label for="pg">Post Graduate</label><br>
+        <input name="qualification" type="radio"id="i" value="Illiterate">
+        <label for="i">Illiterate</label><br>
+        <button type="submit" onclick="handle()">Submit</button>
+    </div>
+</body>
+<script>
+        let result=document.createElement("div");//double quotes for div""
+        result.id="ans";
+        result.style.color="white";
+        document.getElementById("container").appendChild(result);
+
+        
+    function handle(){
+        const userInput=document.querySelector("input[name='qualification']:checked").value;
+        console.log(userInput);
+        /*input → Selects all <input> elements.
+        [name="language"] → Filters only those <input> elements that have name="language".
+        :checked → Finds only the input that is currently selected/checked.
+        It is only used with querySelector() coz we are passing a css selector type as a parameter. */
+
+        if(userInput=== "High School" || userInput==="Post Graduate"){
+            document.getElementById("ans").innerHTML="Eligible for the job";
+        }
+        else{
+            document.getElementById("ans").innerHTML="Not eligible for the job";          
+        }
+    }
+</script>
+</html>

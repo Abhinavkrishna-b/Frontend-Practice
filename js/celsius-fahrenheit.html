@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius to Fahrenheit</title>
+    <style>
+        body{
+            background-color: rgb(251, 196, 93);
+            color:white;
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .layout{
+            background-color: rgb(23, 23, 23);
+            padding:25px;
+            height: 200px;
+        }
+        h2{
+            margin:0;
+        }
+        label{
+            display:block;/*Here it is block coz label is by default inline so marigin bottom and top will not work */
+            padding:2px;
+            margin-top:15px;
+            margin-bottom:3px;
+        }
+        input{
+            color:rgb(84, 83, 83);
+            width:200px;
+            border: 1px white solid;
+            padding: 3px;
+            margin-bottom:5px;
+            border-radius:5px;      
+        }
+        button{
+            background-color: blue;
+            color:white;
+            margin-top:7px;
+            border:0.5px rgb(109, 120, 202) solid;
+            border-radius:7px;
+            cursor: pointer;
+        }
+        #id{
+            color:white;
+        }
+        #random{
+            font-size:25px;
+            font-family:Arial;
+            color:white;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <h2>Convert celcius to Fahrenheit</h2>
+        <div class="ip">
+            <label for="celcius">Celcius:</label>
+            <input id="celcius" type="text" placeholder="Enter Celcius" autofocus>
+        </div>
+        <button class="bt" type="submit" onclick="convert()" >Convert</button>
+        <div id="result">
+
+        </div>
+    </div>
+    <br>
+    <div id="random">
+
+    </div>
+    <script>
+        function convert(){            
+        let celcius=Number(document.getElementById("celcius").value);
+        let fahrenheit=celcius*(9/5)+32;
+        let result=document.getElementById("result");
+        result.innerHTML=fahrenheit.toFixed(2)+"Fahrenheit";
+        }
+        let str1="abhinav";
+        let ran=document.getElementById("random");
+        ran.innerHTML="A random letter from my name "+str1[Math.floor(Math.random()*7)];
+
+
+
+        //template literals 
+        let count=5;
+        let amount=95;
+        console.log(`You have ${count} items in your cart.
+        The bill is $ ${amount}.`);
+
+
+        //Array
+        let strArray=["Abhi","Krish","Balan"];
+        console.log(strArray[0][1]);//This give b   i.e inside the 0 index it search for the 1 index and it's value is b
+        console.log(`The length of the array is ${strArray.length}`);
+        let arr=[[1,2],[3,[4,5]],"string"];
+        console.log(arr[1][1][0]);//4
+
+
+
+        let nums=[5,8,10,7,9,11];
+        console.log(nums.splice(3,3,17,19,111));//here the values will not be updated but only the selected element will be displayed
+        console.log(`The updated array is here now ${nums}`);
+        nums.unshift(100);
+        nums.splice(nums.length-1,0,200);
+        nums.push(1000);
+        let mid=Math.floor((nums.length-1)/2);
+        nums.splice(mid,0,0);
+        console.log(nums);
+    </script>
+</body>
+</html>

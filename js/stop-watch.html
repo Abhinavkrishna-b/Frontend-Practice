@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: medium;
+            height: 100vh;
+        }
+        .watch{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px grey solid;
+            background-color:white;
+            font-size:medium;
+            height:50px;
+            width:150px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 8px 15px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color:lightgreen;">
+    <div class="container">
+        <div class="watch">
+            <span id="hr">00</span> :
+            <span id="mm">00</span> :
+            <span id="ss">00</span>
+        </div><br>
+        <div class="buttons">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+            <button onclick="resetTimer()">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    let hr = 0, mm = 0, ss = 0;
+    let timer = null;
+
+    function startTimer() {
+        if (timer !== null) return; // Prevent multiple intervals
+        timer = setInterval(() => {
+            ss++;
+            if (ss === 60) {
+                ss = 0;
+                mm++;
+            }
+            if (mm === 60) {
+                mm = 0;
+                hr++;
+            }
+            document.getElementById('hr').innerText = hr.toString().padStart(2, '0');
+            document.getElementById('mm').innerText = mm.toString().padStart(2, '0');
+            document.getElementById('ss').innerText = ss.toString().padStart(2, '0');
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    function resetTimer() {
+        stopTimer();
+        hr = mm = ss = 0;
+        document.getElementById('hr').innerText = '00';
+        document.getElementById('mm').innerText = '00';
+        document.getElementById('ss').innerText = '00';
+    }
+</script>
+
+</html>

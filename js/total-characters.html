@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate the no.of characters given</title>
+    <style>
+        body{
+            background-color: rgb(251, 196, 93);
+            color:white;
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .layout{
+            background-color: rgb(23, 23, 23);
+            padding:25px;
+            height: 300px;
+        }
+        h2{
+            margin:0;
+        }
+        label{
+            display:block;/*Here it is block coz label is by default inline so marigin bottom and top will not work */
+            padding:2px;
+            margin-top:15px;
+            margin-bottom:3px;
+        }
+        textarea{
+            color:rgb(84, 83, 83);
+            width:200px;
+            height:150px;
+            border: 1px white solid;
+            padding: 3px;
+            margin-bottom:5px;
+            border-radius:5px;      
+        }
+        button{
+            background-color: blue;
+            color:white;
+            margin-top:7px;
+            border:0.5px rgb(109, 120, 202) solid;
+            border-radius:7px;
+            cursor: pointer;
+            margin-bottom:3px;
+        }
+        #result{
+            margin-top:3px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <h2>No of characters Calculator</h2>
+        <div>
+            <label for="ip">Type a Sentence</label>
+            <textarea name="textarea" id="ip">Type here...</textarea>
+        </div>
+        <br>
+        <button onclick="Calculate()">Calculate</button>
+        <div id="result">
+
+        </div>
+    </div>
+
+
+    <script>
+        function Calculate(){
+            let str=document.getElementById("ip").value;
+            let result=document.getElementById("result");
+            result.innerHTML="No Of Characters:"+str.length;
+
+            /*Instead of getElementById or class or tag we can also use a another function 
+            And that is queryselector  like document.querySelector("p")  document.querySelector("#idname") document.querySelector(".classname")*/
+            
+            //Note if many same classes or tag exists querySelector gets only the 1st one.
+            //To get all the same selector we need to use querySelectorALL().
+            
+        }
+    </script>
+</body>
+</html>
